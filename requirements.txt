@@ -1,0 +1,14 @@
+gradio>=4.0
+openai  
+chromadb>=0.4.22
+langchain>=0.1.16
+faiss-cpu  
+tiktoken 
+transformers  
+sentence-transformers
+scikit-learn
+numpy
+pandas++++++++-+
+
+uuid  
+sqlite3  
