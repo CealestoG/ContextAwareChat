@@ -21,6 +21,7 @@ def init_db():
     """)
     conn.commit()
     conn.close()
+    """Initializes the SQLite database and creates the table if it doesn't exist."""
 
 def log_message(session_id, sender, message):
     logging.info(f"Logged message from {sender} in session {session_id}")
@@ -32,6 +33,7 @@ def log_message(session_id, sender, message):
     """, (session_id, sender, message, datetime.now().isoformat()))
     conn.commit()
     conn.close()
+    """Logs a new chat message to the database."""
 
 def get_history(session_id):
     logging.info(f"Fetching chat history for session {session_id}")
