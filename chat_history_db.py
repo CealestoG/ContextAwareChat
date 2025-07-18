@@ -1,6 +1,9 @@
 import sqlite3
 from datetime import datetime
 import os
+import logging
+logging.basicConfig(level=logging.INFO)
+
 
 DB_NAME = "chat_history.db"
 
@@ -20,6 +23,7 @@ def init_db():
     conn.close()
 
 def log_message(session_id, sender, message):
+    logging.info(f"Logged message from {sender} in session {session_id}")
     conn = sqlite3.connect(DB_NAME)
     cursor = conn.cursor()
     cursor.execute("""
@@ -30,6 +34,7 @@ def log_message(session_id, sender, message):
     conn.close()
 
 def get_history(session_id):
+    logging.info(f"Fetching chat history for session {session_id}")
     conn = sqlite3.connect(DB_NAME)
     cursor = conn.cursor()
     cursor.execute("""
