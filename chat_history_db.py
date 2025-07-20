@@ -24,6 +24,7 @@ def init_db():
     """Initializes the SQLite database and creates the table if it doesn't exist."""
 
 def log_message(session_id, sender, message):
+    """Logs a new chat message to the database."""
     logging.info(f"Logged message from {sender} in session {session_id}")
     conn = sqlite3.connect(DB_NAME)
     cursor = conn.cursor()
@@ -36,6 +37,7 @@ def log_message(session_id, sender, message):
     """Logs a new chat message to the database."""
 
 def get_history(session_id):
+    """Fetches the chat history for a given session ID."""
     logging.info(f"Fetching chat history for session {session_id}")
     conn = sqlite3.connect(DB_NAME)
     cursor = conn.cursor()
@@ -49,6 +51,7 @@ def get_history(session_id):
     return history
 
 def export_history_to_txt(session_id, folder="chat_logs"):
+    """Exports chat history to a text file in the specified folder."""
     history = get_history(session_id)
     
     if not history:
