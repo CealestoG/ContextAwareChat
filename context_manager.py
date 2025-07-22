@@ -35,7 +35,10 @@ class ContextManager:
                 context += f"{prefix}: {msg['content']}\n"
         
         return context.strip()
-    
+        
+    def __str__(self):
+    return f"ContextManager(Entities: {self.entities}, History Count: {len(self.conversation_history)})"
+
     def clear_history(self):
         self.conversation_history = []
         self.entities = {}
