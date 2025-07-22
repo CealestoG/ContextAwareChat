@@ -8,7 +8,7 @@ class ContextManager:
         self.update_entities(content)
     
     def update_entities(self, text: str):
-        
+         # Basic entity extraction based on simple keyword matching
         if "my name is" in text.lower():
             name = text.split("my name is")[-1].split()[0].strip()
             self.entities["user_name"] = name
@@ -19,7 +19,6 @@ class ContextManager:
     def get_context_prompt(self):
         
         context = ""
-        
         
         if self.entities:
             context += "Known Context:\n"
