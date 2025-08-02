@@ -6,7 +6,7 @@ Retrieval-Augmented Generation (RAG) enhances factual accuracy in responses.
 
 ---
 
-## 🧩 Agents
+##  Agents
 
 | Agent              | Role                                                                 |
 |--------------------|----------------------------------------------------------------------|
@@ -18,7 +18,7 @@ Retrieval-Augmented Generation (RAG) enhances factual accuracy in responses.
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Languages:** Python 3.10+
 - **Frameworks:** AutoGen, LangChain
@@ -54,7 +54,7 @@ All LLM-based processing happens locally using Ollama with models like Mistral o
 2. ollama run mistral
 3.python orchestration.py
 ---
-## 🧭 Future Improvements
+##  Future Improvements
 
 - GUI integration using Gradio or Streamlit  
 - Add persistent memory with SQLite or MongoDB  
@@ -63,7 +63,7 @@ All LLM-based processing happens locally using Ollama with models like Mistral o
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **CealestoG**  
 Built for research, learning, and real-world deployment.  
