@@ -6,25 +6,6 @@ Retrieval-Augmented Generation (RAG) enhances factual accuracy in responses.
 
 ---
 
-##  Architecture Overview
-
-
-  overview: |
-    User Query
-       │
-       ▼
-    QueryClassifier Agent ──► Retriever Agent ──► Domain Expert Agent
-            │                          │                    │
-            ▼                          ▼                    ▼
-    Refinement Agent ◄──────── Response Aggregator ◄───────┘
-            │
-            ▼
-    Final Response
---
-
-
----
-
 ## 🧩 Agents
 
 | Agent              | Role                                                                 |
@@ -45,27 +26,6 @@ Retrieval-Augmented Generation (RAG) enhances factual accuracy in responses.
 - **Formats:** Markdown, YAML, JSON
 
 ---
-
-## 📁 Directory Structure
-
-  context_aware_chat/
-  ├── agents/
-  │   ├── query_classifier.py
-  │   ├── retriever_agent.py
-  │   ├── domain_expert_agent.py
-  │   ├── response_aggregator.py
-  │   └── refinement_agent.py
-  ├── rag/
-  │   ├── document_loader.py
-  │   ├── vector_store.py
-  │   ├── retriever.py
-  │   └── rag_pipeline.py
-  ├── orchestration.py
-  ├── llm_interface.py
-  ├── README.md
-  └── requirements.txt
---
-
 ##  Offline Capability
 
 All LLM-based processing happens locally using Ollama with models like Mistral or LLaMA3.
